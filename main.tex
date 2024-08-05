@@ -1,14 +1,102 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+%
+%  MAIN driver/organizer for slide presentation
+%
 
-\title{Jul_31_CS_GroupMeeting_c4h}
-\author{Juntang & Yihan Wang}
-\date{July 2024}
+\documentclass[aspectratio=169]{beamer}
+
+%%
+\makeatletter
+\defbeameroption{show only notes}[]% 
+{
+\beamer@notestrue
+\beamer@notesnormalsfalse
+}
+\makeatother
+
+\setbeameroption{hide notes}
+
+%%  ... include packages
+
+\input{preamble/packages}
+
+\input{preamble/customization}
+
+\input{preamble/graphics}
+
+\input{preamble/extras}
+
+%% ============ set up the title slide and footer information
+
+\input{sections/title}
+
+% ========== bibliography
+\bibliography{ref.bib}
 
 \begin{document}
 
-\maketitle
 
-\section{Introduction}
+\frame{\titlepage}                     % the very first slide frame 
+
+\begin{frame}[noframenumbering,plain]
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+%%  ---------- Outline 
+% \part{Part I}
+
+\section{First section (use sections for outline)}
+
+\input{sections/simple}
+
+%% ----------- Problem description 
+
+% \input{sections/problem-description}
+% \input{sections/state-of-the-art}
+
+\input{sections/results}
+
+%% ----------- Method
+
+% \input{sections/bluered-dcp-v2}
+% \input{sections/bluered-har-v2}
+% \input{sections/bluered-phase}
+
+%% ----------- Algorithm 
+
+\input{sections/bluered-alg-formal}
+
+% \input{sections/bluered-alg-informal}
+
+%% ----------- Experiments
+
+
+% \input{sections/exp-polblogs}
+% \input{sections/exp-mnist}
+% \input{sections/exp-citation}
+
+%% ----------- Discussion
+
+% \input{sections/discussion}
+
+
+%% -----------  Acknowledgement
+
+\input{sections/acknowledgement}
+
+
+%% ============ BIBLIOGRAPHY
+\appendix
+
+\begin{frame}[noframenumbering,plain,allowframebreaks]{Bibliography}
+    \printbibliography[heading=none]
+\end{frame}
+
 
 \end{document}
+
+
+%%%%
+
+%%%%  provided by Xiaobai Sun 
+%%%%
