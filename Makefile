@@ -1,7 +1,7 @@
 ##
 SHELL := /bin/bash # Use bash syntax
 
-MAIN = topic-slide-main
+MAIN = main
 # "make" target
 
 all: pdf
