@@ -6,61 +6,6 @@
 \begin{frame}
   \frametitle{Citing articles}
 
-  \begin{table}[h!]
-    \centering
-    \caption{Summary of hyperspectral datasets}
-    \label{tab:datasets}
-    \begin{tabular}{lccccccl}
-    \hline
-    \textbf{Dataset} & \textbf{\#x} & \textbf{\#y} & \textbf{\#\bm{$\lambda$}} & \textbf{\bm{$\lambda$} (nm)} & \textbf{\#C} & \textbf{Res. (m)}  &Time\\
-    \hline
-    Indian Pines\footnotemark[1] & 145 & 145 & 220 & 400--2500 & 16 & 20  &1992\\
-    Salinas\footnotemark[2] & 512 & 217 & 204 & 400--2500 & 16 & 3.7  &1998\\
-    Salinas-A\footnotemark[2] & 86 & 83 & 204 & 400--2500 & 6 & 3.7  &1998\\
-    Pavia\footnotemark[3] & 1096 & 1096 & 102 & 430--860~ & 9 & 1.3  &2003\\
-    Pavia University\footnotemark[3] & 610 & 610 & 103 & 430--860~ & 9 & 1.3  &2003\\
-    WHU-Hi-HanChuan & 1217& 303& 274*& 400-1000~& 16& 0.109&2016\\
-     WHU-Hi-HongHu& 940& 475& 270*& 400-1000~& 22& 0.043&2017\\
-     WHU-Hi-LongKou& 550& 400& 270*& 400-1000~& 9& 0.463&2018\\
-     \hline
-    \end{tabular}
-    \end{table}
-\end{frame}
-
-
-\begin{frame}
-\begin{table}[h!]
-\centering
-\caption{Performance of unsupervised clustering methods on hyperspectral datasets}
-\label{tab:clustering_methods}
-\begin{tabular}{lcccccc}
-\hline
-\textbf{Dataset} & \textbf{K-Means} & \textbf{GMM}\footnotemark[4] & \textbf{DBSCAN}\footnotemark[5] & \textbf{HDBSCAN}\footnotemark[6] & \textbf{Spectral}\footnotemark[7] \\
-\hline
-Pines & \begin{tabular}{c|c} \textcolor{mycolor1}{41.81}& \textcolor{mycolor4}{25.90}\\ \hline \textcolor{mycolor2}{0.3315}& \textcolor{mycolor3}{0.1602} \end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{45.68}& \textcolor{mycolor4}{37.25}\\ \hline \textcolor{mycolor2}{0.3609}& \textcolor{mycolor3}{0.2908}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{38.87}& \textcolor{mycolor4}{17.59}\\ \hline \textcolor{mycolor2}{0.2531}& \textcolor{mycolor3}{0.2432}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{36.63}& \textcolor{mycolor4}{14.64}\\ \hline \textcolor{mycolor2}{0.2275}& \textcolor{mycolor3}{0.2349}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{41.48}& \textcolor{mycolor4}{22.65}\\ \hline \textcolor{mycolor2}{0.3114}& \textcolor{mycolor3}{0.2695}\end{tabular} \\
-\hline
-Salinas & \begin{tabular}{c|c} \textcolor{mycolor1}{64.14}& \textcolor{mycolor4}{55.07}\\ \hline \textcolor{mycolor2}{0.5938}& \textcolor{mycolor3}{0.5778}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{79.87}& \textcolor{mycolor4}{84.02}\\ \hline \textcolor{mycolor2}{0.7731}& \textcolor{mycolor3}{0.6979}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{60.13}& \textcolor{mycolor4}{52.20}\\ \hline \textcolor{mycolor2}{0.5441}& \textcolor{mycolor3}{0.5006}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{63.93}& \textcolor{mycolor4}{59.14}\\ \hline \textcolor{mycolor2}{0.5941}& \textcolor{mycolor3}{0.5867}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{65.49}& \textcolor{mycolor4}{63.23}\\ \hline \textcolor{mycolor2}{0.6110}& \textcolor{mycolor3}{0.5871}\end{tabular} \\
-\hline
-SalinasA & \begin{tabular}{c|c} \textcolor{mycolor1}{83.40}& \textcolor{mycolor4}{85.17}\\ \hline \textcolor{mycolor2}{0.7998}& \textcolor{mycolor3}{0.8178}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{86.82}& \textcolor{mycolor4}{89.85}\\ \hline \textcolor{mycolor2}{0.8406}& \textcolor{mycolor3}{0.8591}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{73.11}& \textcolor{mycolor4}{3.89} \\ \hline \textcolor{mycolor2}{0.1399} & \textcolor{mycolor3}{0.4698} \end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{74.78}& \textcolor{mycolor4}{69.08}\\ \hline \textcolor{mycolor2}{0.6991}& \textcolor{mycolor3}{0.8065}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{98.13}& \textcolor{mycolor4}{98.15}\\ \hline \textcolor{mycolor2}{0.9766}& \textcolor{mycolor3}{0.9574}\end{tabular} \\
-\hline
-Pavia & \begin{tabular}{c|c} \textcolor{mycolor1}{74.99}& \textcolor{mycolor4}{54.46}\\ \hline \textcolor{mycolor2}{0.6570}& \textcolor{mycolor3}{0.7883}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{90.37}& \textcolor{mycolor4}{73.52}\\ \hline \textcolor{mycolor2}{0.8658}& \textcolor{mycolor3}{0.9055}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{59.90}& \textcolor{mycolor4}{19.07}\\ \hline \textcolor{mycolor2}{0.3460}& \textcolor{mycolor3}{0.3308}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{67.92}& \textcolor{mycolor4}{28.29}\\ \hline \textcolor{mycolor2}{0.5372}& \textcolor{mycolor3}{0.6505}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{83.04}& \textcolor{mycolor4}{59.86}\\ \hline \textcolor{mycolor2}{0.7622}& \textcolor{mycolor3}{0.8520}\end{tabular} \\
-\hline
-PaviaU & \begin{tabular}{c|c} \textcolor{mycolor1}{65.64}& \textcolor{mycolor4}{55.87}\\ \hline \textcolor{mycolor2}{0.5491}& \textcolor{mycolor3}{0.4917}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{57.93}& \textcolor{mycolor4}{45.04}\\ \hline \textcolor{mycolor2}{0.4646}& \textcolor{mycolor3}{0.4752}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{59.48}& \textcolor{mycolor4}{28.54}\\ \hline \textcolor{mycolor2}{0.4270}& \textcolor{mycolor3}{0.4901}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{45.62}& \textcolor{mycolor4}{16.85}\\ \hline \textcolor{mycolor2}{0.0947}& \textcolor{mycolor3}{0.0772}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{69.13}& \textcolor{mycolor4}{60.06}\\ \hline \textcolor{mycolor2}{0.5833}& \textcolor{mycolor3}{0.5217}\end{tabular} \\
-\hline
-HanChuan & \begin{tabular}{c|c} \textcolor{mycolor1}{68.91}& \textcolor{mycolor4}{31.70}\\ \hline \textcolor{mycolor2}{0.6325}& \textcolor{mycolor3}{0.7850}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{92.87}& \textcolor{mycolor4}{77.43}\\ \hline \textcolor{mycolor2}{0.9170}& \textcolor{mycolor3}{0.9651}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{93.71}& \textcolor{mycolor4}{80.75}\\ \hline \textcolor{mycolor2}{0.9267}& \textcolor{mycolor3}{0.9667}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} \\
-\hline
-HongHu & \begin{tabular}{c|c} \textcolor{mycolor1}{70.30}& \textcolor{mycolor4}{26.93}\\ \hline \textcolor{mycolor2}{0.6153}& \textcolor{mycolor3}{0.7882}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{91.13}& \textcolor{mycolor4}{67.72}\\ \hline \textcolor{mycolor2}{0.8883}& \textcolor{mycolor3}{0.9787}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{94.33}& \textcolor{mycolor4}{80.38}\\ \hline \textcolor{mycolor2}{0.9286}& \textcolor{mycolor3}{0.9839}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} \\
-\hline
-LongKou & \begin{tabular}{c|c} \textcolor{mycolor1}{86.94}& \textcolor{mycolor4}{54.86}\\ \hline \textcolor{mycolor2}{0.8240}& \textcolor{mycolor3}{0.8453}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{96.03}& \textcolor{mycolor4}{87.61}\\ \hline \textcolor{mycolor2}{0.9481}& \textcolor{mycolor3}{0.9740}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{95.55}& \textcolor{mycolor4}{87.37}\\ \hline \textcolor{mycolor2}{0.9419}& \textcolor{mycolor3}{0.9719}\end{tabular} & \begin{tabular}{c|c} \textcolor{mycolor1}{TBD}& \textcolor{mycolor4}{TBD}\\ \hline \textcolor{mycolor2}{TBD}& \textcolor{mycolor3}{TBD}\end{tabular} \\
-\hline
-\multicolumn{5}{c}{} & \multicolumn{1}{c}{
-    \begin{tabular}{c|c}
-    \textcolor{mycolor1}{OA (\%)} & \textcolor{mycolor4}{AA (\%)} \\ \hline
-    \textcolor{mycolor2}{Kappa} & \textcolor{mycolor3}{ARI} \\ \hline
-    \end{tabular}
-} \\
-\end{tabular}
-\end{table}
 
 
   \alternativefootnote{

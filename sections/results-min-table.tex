@@ -1,0 +1,49 @@
+% results-min-table.tex
+%
+% Drafted by Juntang on August 27, 2024
+% Refined by Juntang on September 10, 2024
+
+\definecolor{mycolor1}{RGB}{131, 99, 159}
+\definecolor{mycolor2}{RGB}{234, 120, 39}
+\definecolor{mycolor3}{RGB}{68, 153, 69}
+\definecolor{mycolor4}{RGB}{31, 112, 169}
+
+\begin{frame}
+  \frametitle{Experiments - preliminary results}
+    \begin{table}[htbp]
+    \centering
+    \caption{Performance of Unsupervised Clustering Methods on Hyperspectral Datasets ({\color{mycolor1} min Precisions} and {\color{mycolor2}min Recalls})}
+    \label{tab:clustering_methods}
+    \resizebox{0.8\textwidth}{!}{
+    \begin{tabular}{lccccccccl}
+    \hline
+    \textbf{Dataset} & \textbf{K-Means} & \textbf{GMM} & \textbf{DBSCAN} & \textbf{HDBSCAN} & \textbf{Spectral} & \textbf{kNN-Leiden}  & $\mathbf{\gamma}$ & \textbf{BlueRed} &$\Omega$\\
+    \hline
+    Indian Pines & {\color{mycolor1} ~0.74} {\color{mycolor2} ~0.00}& {\color{mycolor1} 19.60} {\color{mycolor2} 35.97} & {\color{mycolor1} 53.34} {\color{mycolor2} 28.77}& {\color{mycolor1} 11.88} {\color{mycolor2} ~0.00}& {\color{mycolor1} 11.08} {\color{mycolor2} ~2.39}& {\color{mycolor1} 13.03} {\color{mycolor2} 47.51}  &0.25 &{\color{mycolor1} 35.23} {\color{mycolor2} 47.39} &9\\
+    KSC & {\color{mycolor1} 33.26} {\color{mycolor2} 37.12}& {\color{mycolor1} 43.57} {\color{mycolor2} 81.35}& {\color{mycolor1} 21.78} {\color{mycolor2} 65.62}& {\color{mycolor1} ~0.00} {\color{mycolor2} 52.51}& {\color{mycolor1} ~0.00} {\color{mycolor2} 41.22}& {\color{mycolor1} 52.87} {\color{mycolor2} 74.36}&0.25 &{\color{mycolor1} 79.34} {\color{mycolor2} 82.69} &15\\
+    Salinas & {\color{mycolor1} 44.75} {\color{mycolor2} 58.70} & {\color{mycolor1} 50.00} {\color{mycolor2} 79.09} & {\color{mycolor1} 16.02} {\color{mycolor2} 38.69}& {\color{mycolor1} 34.15} {\color{mycolor2} 53.55} & {\color{mycolor1} 12.92} {\color{mycolor2} 72.08}& {\color{mycolor1} 47.07} {\color{mycolor2} 81.11}  &0.10 &{\color{mycolor1} 52.51} {\color{mycolor2} 81.11} &14\\
+    Salinas-A & {\color{mycolor1} 91.44} {\color{mycolor2} 90.42} & {\color{mycolor1} 99.32} {\color{mycolor2} 91.49} & {\color{mycolor1} 83.99} {\color{mycolor2} 80.05}& {\color{mycolor1} 82.16} {\color{mycolor2} 88.15} & {\color{mycolor1} 91.84} {\color{mycolor2} 73.21}& {\color{mycolor1} 98.94} {\color{mycolor2} 96.10}  &0.25 &{\color{mycolor1} 99.22} {\color{mycolor2} 96.10} &9\\
+    Botswana& {\color{mycolor1} 29.21} {\color{mycolor2} 42.36}& {\color{mycolor1} 67.19} {\color{mycolor2} 44.21}& {\color{mycolor1} ~0.00} {\color{mycolor2} 73.42}& {\color{mycolor1} ~0.00} {\color{mycolor2} 30.50}& {\color{mycolor1} ~0.00} {\color{mycolor2} 56.07}& {\color{mycolor1} 71.20} {\color{mycolor2} 62.24}&0.25 &{\color{mycolor1} 94.00} {\color{mycolor2} 95.91}&8\\
+    Pavia & {\color{mycolor1} 68.21} {\color{mycolor2} 34.97}& {\color{mycolor1} 49.04} {\color{mycolor2} 78.76} & {\color{mycolor1} 43.38} {\color{mycolor2} 40.44}& {\color{mycolor1} 96.12} {\color{mycolor2} 52.15}& {\color{mycolor1} 44.18} {\color{mycolor2} 56.45}& {\color{mycolor1} 57.08} {\color{mycolor2} 75.03}  &0.25 &{\color{mycolor1} 82.54} {\color{mycolor2} 69.64}&12\\
+    PaviaU & {\color{mycolor1} 44.05} {\color{mycolor2} 51.35} & {\color{mycolor1} 46.03} {\color{mycolor2} 29.07} & {\color{mycolor1} 77.69} {\color{mycolor2} 53.73}& {\color{mycolor1} ~0.00} {\color{mycolor2} 74.75}& {\color{mycolor1} 37.16} {\color{mycolor2} 55.53}& {\color{mycolor1} 53.88} {\color{mycolor2} 77.95}&0.25&{\color{mycolor1} 48.22} {\color{mycolor2} 69.43}&16\\
+    WHU-Hi-HanChuan & {\color{mycolor1} 74.82} {\color{mycolor2} 81.54}& {\color{mycolor1} 86.04} {\color{mycolor2} 42.78} & {\color{mycolor1} 99.99} {\color{mycolor2} 44.82}& {\color{mycolor1} 99.90} {\color{mycolor2} 78.49}& {\color{mycolor1} ~1.72} {\color{mycolor2} ~6.52}& {\color{mycolor1} 92.56} {\color{mycolor2} 94.71} &1e-4 &{\color{mycolor1} 89.83} {\color{mycolor2} 90.45}&133\\
+    WHU-Hi-HongHu & {\color{mycolor1} 76.98} {\color{mycolor2} 86.05}& {\color{mycolor1} 77.31} {\color{mycolor2} 86.05} & {\color{mycolor1} 99.99} {\color{mycolor2} 28.11}& {\color{mycolor1} 99.99} {\color{mycolor2} 76.34}& {\color{mycolor1} 14.53} {\color{mycolor2} 45.78}& {\color{mycolor1} 97.87} {\color{mycolor2} 95.72}&1e-14 &{\color{mycolor1} 87.99} {\color{mycolor2} 96.02}&155\\
+    WHU-Hi-LongKou & {\color{mycolor1} 99.96} {\color{mycolor2} 69.35}& {\color{mycolor1} 99.99} {\color{mycolor2} 69.35} & {\color{mycolor1} 98.32} {\color{mycolor2} 69.35}& {\color{mycolor1} 99.73} {\color{mycolor2} 69.35}& {\color{mycolor1} 75.36} {\color{mycolor2} 51.12}& {\color{mycolor1} 89.86} {\color{mycolor2} 76.97}  &1e-14 &{\color{mycolor1} 97.70} {\color{mycolor2} 97.16}&58\\
+    BigEarthNet-S2-s& {\color{mycolor1} 34.76} {\color{mycolor2} 49.95}& {\color{mycolor1} 33.24} {\color{mycolor2} 47.58}& {\color{mycolor1} 65.06} {\color{mycolor2} 65.39}& {\color{mycolor1} ~0.00} {\color{mycolor2} 74.32}& {\color{mycolor1} ~0.00} {\color{mycolor2} 75.90}& {\color{mycolor1} 46.13} {\color{mycolor2} 48.72}&0.5 &{\color{mycolor1} 28.86} {\color{mycolor2} ~0.00}&23\\
+    \hline
+      \multicolumn{8}{c}{} & \multicolumn{1}{c}{
+        \begin{tabular}{c}
+        \textcolor{mycolor1}{Pre.} \textcolor{mycolor2}{Rec.} \\
+        \hline
+        \end{tabular}
+      } & \\
+    \end{tabular}
+    } &
+    \end{table}
+
+\end{frame}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../topic-slide-main"
+%%% End:
