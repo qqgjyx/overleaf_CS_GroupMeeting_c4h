@@ -1,0 +1,25 @@
+stages:
+  - sync
+
+sync_job:
+  stage: sync
+  image: ubuntu:20.04
+  script:
+    - apt-get update && apt-get install -y git
+    - git config --global user.email "jw853@duke.edu"  # Replace with your email
+    - git config --global user.name "qqgjyx"  # Replace with your name
+    
+    # Sync from GitHub to GitLab
+    - git clone https://oauth2:${GITHUB_TOKEN}@github.com/qqgjyx/overleaf_CS_GroupMeeting_c4h.git temp_repo
+    - cd temp_repo
+    - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_slides_c4h.git
+    - git pull gitlab main --allow-unrelated-histories || echo "No changes from GitLab"
+    - git push gitlab main || echo "Already up to date on GitLab"
+    
+    # Sync from GitLab to GitHub
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/qqgjyx/overleaf_CS_GroupMeeting_c4h.git
+    - git pull github main || echo "No changes from GitHub"
+    - git push github main || echo "Already up to date on GitHub"
+    
+  only:
+    - main  # Adjust as necessary
